@@ -4,7 +4,7 @@ int main( int argc, char* argv[] )
 {
 	int switchValue = 2;
 	
-	if switchValue == 1
+	if ( switchValue == 1)
 	{
 		//case 1:
 		printf("Switch Value: 1\n");
