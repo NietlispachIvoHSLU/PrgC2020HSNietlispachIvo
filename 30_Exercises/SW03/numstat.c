@@ -1,38 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-int main( int argc, char* argv[2] )
+//Mit Ken Müller gelöst
+int main( int argc, char* argv[] )
 {
 		
-	int value1 = 0, value2 = 0, minValue = 0, maxValue = 0;
+	float value1 = 0, value2 = 0;
 	
 	//make sure we have 2 arguments
 	if (argc != 3 )
 	{
-		printf("usage: Zu wenig Argumente \n");
+		printf("usage: numstat val1 val2 \n");
 	}
 	else
 	{
-		value1 = atoi(argv[1]);
-		value2 = atoi(argv[2]);
+		value1 = atof(argv[1]);
+		value2 = atof(argv[2]);
 		
-		printf ("Value1 %d, Value2 %d\n" , value1, value2); 
+		printf ("Value1 %.3f, Value2 %.3f\n" , value1, value2); 
 	
-		minValue = value1;
-		if ( minValue > value2 )
-			minValue = value2;
+			if (value1 < value2)
+			{
+			printf("Values in ascending Order: %.3f, %.3f\n", value1, value2);
+			}
+			else
+			{
+			printf("Values in ascending Order: %.3f, %.3f\n", value2, value1);
+			}
 			
-		maxValue = value1;
-		if ( maxValue < value2 )
-			maxValue = value2;
-		
-		printf("ascending order: minValue: %d\n, maxValue %d\n", minValue, maxValue);
-		
-		printf("summe: %d\n", value1 + value2);
-		printf("Absolute difference: %d\n", maxValue - minValue);
-		printf("Product: %d\n", value1*value2);
-		printf("Ratio: %d\n", value2/value1);
+		printf("summe: %.3f\n", value1 + value2);
+		printf("Absolute difference: %.3f\n", value1 - value2);
+		printf("Product: %.3f\n", value1 * value2);
+		printf("Ratio: %.3f\n", value2 / value1);
 		
 	}
 	return 0;
