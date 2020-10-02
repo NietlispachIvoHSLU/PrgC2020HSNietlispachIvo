@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Mit Ken Müller gelöst
 int main( int argc, char* argv[] )
 {
 		
